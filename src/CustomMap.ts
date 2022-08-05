@@ -1,7 +1,7 @@
 import { User } from './User';
 import { Company } from './Company';
 
-export interface Mappeable {
+export interface Mappable {
     location: {
         lat: number;
         lng: number;
@@ -23,7 +23,7 @@ export class CustomMap {
         });
     }
 
-    addMarker(mappable: Mappeable) {
+    addMarker(mappable: Mappable) {
         const marker = new google.maps.Marker({
             map: this.googleMap,
             position: mappable.location
